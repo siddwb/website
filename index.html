@@ -1,10 +1,22 @@
 <Html>    
-<Head>  
-<title>  
-Hello
-</title>  
-</Head>  
-<Body>   
-Under Construction - contact siddhantsandeepjain@gmail.com
-</Body>  
-</Html>  
+    <Head>  
+    <title>  
+    Hello
+    </title>  
+    </Head>  
+    <Body>   
+    Name - Sid <br>
+    Description -  monke<br>
+    <button onclick="barrell()">Click Here Important</button>
+    </Body>  
+    <script>
+
+        function barrell(){
+        var style = document.createElement('style');
+    style.type = 'text/css';
+    var keyFrames = " @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }body{-webkit-animation: spin 5s linear;}";
+    style.innerHTML = keyFrames
+    document.head.appendChild(style);
+    }
+    </script>
+    </Html>  
