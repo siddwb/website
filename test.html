@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #section-container {
+            display: flex;
+        }
+
+        .section {
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .red-section {
+            background-color: red;
+        }
+
+        .green-section {
+            background-color: green;
+        }
+
+        .purple-section {
+            background-color: purple;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        #question {
+            width: 40%;
+            padding-right: 20px;
+        }
+
+        #option {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            background-color: #fff;
+        }
+
+        .box:hover {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            background-color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+
+        #btn-container {
+            margin-top: auto;
+        }
+
+        .nav-btn {
+            margin: 5px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="section-container">
+           
+        </div>
+        <div id="time">Time Left </div>
+        <div class="dropdown-container">
+            <label for="category">Select Language:</label>
+            <select id="category" class="dropdown">
+                <option value="english">English</option>
+                <option value="हिन्दी">हिन्दी</option>
+            </select>
+        </div>
+    </header>
+
+    <div id="container">
+        <div id="question">Question goes here...</div>
+        <div id="option"> </div>
+        <div id="btn-container" class="box"></div>
+
+
+    </div>
+
+    
+    <button class="nav-btn" id="clear-btn">Clear</button>
+    <button class="nav-btn" id="save-btn">Save</button>
+
+    <footer>
+      
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+

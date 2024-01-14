@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.centered-div {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    font-weight: 900;
+    font-size: larger;
+    
+  }
+
+#quiz-container {
+   
+    display: flex;
+    flex-direction: row;
+}
+
+
+#row-container{
+    display: flex;
+}
+
+
+.question {
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+#submit-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-btn {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.box {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the container */
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #000;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 4px;
+    cursor: pointer;
+    display: flex;
+}
+
+#time{
+    margin: 10px;
+    padding: 15px;
+}
+
+.dropdown-container{
+    margin: 10px;
+    padding: 15px;
+}
+
+.section{
+        /* Add styling for each child section */
+        margin: 10px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      
+}
+
+.red-section{
+    background-color:red
+}
+
+.green-section{
+    background-color: green;
+}
+
+.purple-section{
+    background-color: purple;
+}
