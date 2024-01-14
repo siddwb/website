@@ -547,12 +547,16 @@ function shuffleArray(array) {
     let answer_state = answer_arr[1];
     if (answer_state=='Attempted' || answer_state=='Marked') {
         answers[data[currentQuestionIndex].question_ID][1] = 'Attempted';
+        console.log(answers)
         createQuestionButtons()
     }
 })
 
 
   function displayQuestion(data) {
+
+    
+  updateNavButtons();
 
       question_content.innerHTML = `<p>${data.description[language_chosen]}</p>`;
       options_content.innerHTML = ''
@@ -614,6 +618,7 @@ function shuffleArray(array) {
   }
 
   function nextQuestion() {
+    console.log(currentQuestionIndex)
       if (currentQuestionIndex < sections[currentSection].length - 1) {
           currentQuestionIndex++;
          // console.log(sections[currentSection])
@@ -622,13 +627,19 @@ function shuffleArray(array) {
       updateNavButtons();
   }
 
+
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+
+  prevButton.addEventListener('click',prevQuestion);
+  nextButton.addEventListener('click',nextQuestion)
+
   function updateNavButtons() {
 
-      const prevButton = document.getElementById('prev');
-      const nextButton = document.getElementById('next');
+    
       //const submitButton = document.getElementById('submit-btn');
       prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
-      nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'inline-block';
+      nextButton.style.display = currentQuestionIndex === sections[currentSection].length - 1 ? 'none' : 'inline-block';
       //submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'inline-block' : 'none';
 
   }
@@ -647,12 +658,11 @@ function shuffleArray(array) {
               }
           });
 
-          // Replace this with the logic to send answers to the server
+         
 
           */
       console.log('User answers:', answers);
   }
 
-  // Display the first question when the page loads
-  displayQuestion(questions[currentQuestionIndex]);
+  displayQuestion(sections[currentSection][currentQuestionIndex])
   updateNavButtons();
