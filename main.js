@@ -209,7 +209,7 @@ const questions = [
   },
   {
     "question_ID": "q5",
-    "Section": "Geography",
+    "Section": "Science",
     "description": {
       "english": "Which river is the longest in the world?",
       "हिन्दी": "दुनिया का सबसे लंबा नदी कौन सा है?"
@@ -235,7 +235,7 @@ const questions = [
   },
   {
     "question_ID": "q6",
-    "Section": "Geography",
+    "Section": "Science",
     "description": {
       "english": "Which mountain is the tallest in the world?",
       "हिन्दी": "दुनिया का सबसे ऊचा पर्वत कौन सा है?"
@@ -441,7 +441,7 @@ function shuffleArray(array) {
   let language_chosen = 'english'
   
   const answers = {}
-  const button_container = document.getElementById('btn-container');
+  const button_container = document.getElementById('box');
   const section_container = document.getElementById('section-container');
   const categoryDropdown = document.getElementById("category");
 
@@ -525,7 +525,7 @@ function shuffleArray(array) {
   
 
   const question_content = document.getElementById('question');
-  const options_content = document.getElementById('option');
+  const options_content = document.getElementById('options');
   const clear_btn = document.getElementById('clear-btn');
   const save_btn = document.getElementById('save-btn');
 
