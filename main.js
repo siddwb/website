@@ -9,7 +9,7 @@ const questions = [
     },
     "options": {
       "1": {
-        "english": "red",
+        "english": "Red",
         "हिन्दी": "लाल"
       },
       "2": {
@@ -21,7 +21,7 @@ const questions = [
         "हिन्दी": "काला"
       },
       "4": {
-        "english": "white",
+        "english": "White",
         "हिन्दी": "सफेद"
       }
     }
@@ -444,6 +444,7 @@ function shuffleArray(array) {
   const button_container = document.getElementById('box');
   const section_container = document.getElementById('section-container');
   const categoryDropdown = document.getElementById("category");
+  const questionNo = document.getElementById('questionName')
 
   categoryDropdown.addEventListener('change',()=>{
       language_chosen = categoryDropdown.value
@@ -555,7 +556,7 @@ function shuffleArray(array) {
 
   function displayQuestion(data) {
 
-    
+     questionNo.innerHTML = 'Question ' + (currentQuestionIndex+1);
   updateNavButtons();
 
       question_content.innerHTML = `<p>${data.description[language_chosen]}</p>`;
@@ -618,7 +619,7 @@ function shuffleArray(array) {
   }
 
   function nextQuestion() {
-    console.log(currentQuestionIndex)
+    //console.log(currentQuestionIndex)
       if (currentQuestionIndex < sections[currentSection].length - 1) {
           currentQuestionIndex++;
          // console.log(sections[currentSection])

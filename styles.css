@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    
 }
 
 .centered-div {
@@ -29,8 +30,14 @@ body {
 
 
 .options {
-    list-style-type: none;
-    padding: 0;
+    list-style-type:none;
+    padding-right: 20px;
+}
+
+
+
+#employee{
+    padding-right:20px
 }
 
 
@@ -110,6 +117,7 @@ header {
 
 #section-container {
     display: flex;
+    padding-left: 15px;
 }
 
 .section {
@@ -122,11 +130,11 @@ header {
 
 
 #exam-name{
-    padding: 10px;
+    padding: 20px;
 }
 
 #attempts{
-    margin: 10px;
+    margin: 20px;
     padding :15px
 }
 
@@ -193,14 +201,13 @@ header {
     flex: 1;
     border: 2px solid black;
     margin-left: 20px;
-    margin-right:20px
+    margin-right:20px;
+    align-content: center;
 }
 
 #optionName{
     text-align: center;
     border: 2px solid black;
-    margin-left: 20px;
-    margin-right:20px
 }
 
 
