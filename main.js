@@ -504,12 +504,15 @@ function shuffleArray(array) {
             optionElement.className+=' purple-section'
           else if(answer_state=='Attempted')
             optionElement.className+=' green-section'
+
+          if(i==currentQuestionIndex)optionElement.className+=' current'
           
           optionElement.innerHTML = i + 1;
           optionElement.addEventListener('click', () => {
               currentQuestionIndex = i;
               updateNavButtons();
-              displayQuestion(data[i])
+              createQuestionButtons() //remove for performance
+              displayQuestion(data[i]) 
           })
 
           button_container.appendChild(optionElement);
@@ -555,9 +558,9 @@ function shuffleArray(array) {
 
 
   function displayQuestion(data) {
-
+    updateNavButtons();
      questionNo.innerHTML = 'Question ' + (currentQuestionIndex+1);
-  updateNavButtons();
+
 
       question_content.innerHTML = `<p>${data.description[language_chosen]}</p>`;
       options_content.innerHTML = ''
@@ -637,7 +640,7 @@ function shuffleArray(array) {
 
   function updateNavButtons() {
 
-    
+    createQuestionButtons()
       //const submitButton = document.getElementById('submit-btn');
       prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
       nextButton.style.display = currentQuestionIndex === sections[currentSection].length - 1 ? 'none' : 'inline-block';
