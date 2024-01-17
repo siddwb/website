@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Exam Platform</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+           
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+      
+        .red-section {
+            background-color: red;
+        }
+
+        .green-section {
+            background-color: green;
+        }
+
+        .purple-section {
+            background-color: purple;
+        }
+
+     
+     
+
+        .box:hover {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px;
+            background-color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+
+       
+
+        .nav-btn {
+            margin: 5px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <div id="exam-name">MCQ Exam</div>  <!-- change name of exam -->
+
+        <div id="time"></div>
+
+        <div class="dropdown-container">
+            <label for="category">Select Language:</label>
+            <select id="category" class="dropdown">
+                <option value="english">English</option>
+                <option value="हिन्दी">हिन्दी</option>
+            </select>
+        </div>
+
+
+        
+        <div id="employee">Employee</div>
+
+    </header>
+
+    <div class="header2">
+        <div id="section-container"> </div>
+        <div id="attempts">To be filled</div>
+    </div>
+   
+    
+
+    <div id="container">
+
+    <div class="questionContainer"> 
+
+        <div class="questionHeader">
+            <div class="arrow-left" id="prev">&lt;</div>
+            <div id="questionName">Question</div>
+            <div class="arrow-right" id="next">&gt;</div>
+        </div>
+
+        <div id="question">Question goes here...</div>
+        <img>
+    </div>
+
+
+        <div id='option' class="questionHeader">            <div id="optionName">Options</div> <div id="options"> </div></div>
+
+    <div id="btn-container">
+        <div id="sectionName">Section</div>
+        <div id="box"></div>
+    </div>
+    </div>
+
+    
+    
+    
+
+
+
+    <footer>
+        <button class="nav-btn" id="clear-btn">Clear</button>
+        <button class="nav-btn" id="save-btn">Save</button>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
