@@ -362,31 +362,6 @@ const questions = [
         "हिन्दी": "एंडी मरे"
       }
     }
-  },{
-    "question_ID": "xyz789",
-    "Section": "Duck",
-    "description": {
-      "english": "What sound does Duck make?",
-      "हिन्दी": "9 का वर्ग क्या है?"
-    },
-    "options": {
-      "1": {
-        "english": "81",
-        "हिन्दी": "81"
-      },
-      "2": {
-        "english": "64",
-        "हिन्दी": "64"
-      },
-      "3": {
-        "english": "100",
-        "हिन्दी": "100"
-      },
-      "4": {
-        "english": "49",
-        "हिन्दी": "49"
-      }
-    }
   }
 ]
 
