@@ -1,5 +1,5 @@
 
-const questions = [
+let questions = [
   {
     "question_ID": "dfgytrfv",
     "Section": "Science",
@@ -367,6 +367,8 @@ const questions = [
 
 
 
+//questions = Array(10).fill(questions).flat();
+
 const timeContainer = document.getElementById('time')
 
 var examStartTime = new Date();
@@ -426,15 +428,6 @@ function displayEndTime() {
 
 
 /* Randomize array in-place using Durstenfeld shuffle algorithm */
-function shuffleArray(array) {
-  for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-  }
-}
-
 
 
   let currentQuestionIndex = 0;
