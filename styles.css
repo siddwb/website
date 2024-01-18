@@ -132,9 +132,33 @@ header {
     padding: 20px;
 }
 
+.div-circle {
+    width: 5x; /* Adjust the size as needed */
+    height: 5px; /* Same as width to create a perfect circle */
+    background-color: #3498db; /* Set the background color */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+}
+
 #attempts{
-    margin: 20px;
-    padding :15px
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding :15px;
+    font-size:14px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflowing text */
+     /* Display an ellipsis (...) for overflow */
+}
+
+.attempts-row{
+    display: flex;
+    align-items:  center;
+}
+
+.attempts-ind{
+    display: flex;
+    flex: 1;
+    padding-left: 10px;
 }
 
 
@@ -148,7 +172,7 @@ header {
 }
 
 
-#btn-container{
+.btn-container{
     height: 100%;
     border: 2px solid #000;
     border-radius: 5px;
@@ -202,6 +226,11 @@ header {
     height: 100%;
 }
 
+
+#attempts{
+    display: flex;
+    
+}
 
 
 #sectionName{
@@ -276,4 +305,47 @@ header {
     cursor: pointer;
     display: flex;
     margin-right: 30px;
+}
+
+
+#footer{
+    display: flex;
+    padding-left:20px;
+    margin-top:10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+
+.foot{
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+
+
+.foot-btn{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center; /* Add this line to horizontally center the content */
+    margin-right: 3px;
+    margin-top: 0px;
+    width: 25%;
+}
+
+.foot-btn-div{
+    background-color: #007bff;
+    text-align: center;
+    width: 30%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size:15px
+}
+
+#exam-name{
+    margin-left: 10px;
 }
