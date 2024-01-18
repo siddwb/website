@@ -94,22 +94,29 @@
     <div class="questionContainer"> 
 
         <div class="questionHeader">
-            <div class="arrow-left" id="prev">&lt;</div>
+            <div class="arrow" id="prev">&lt;</div>
             <div id="questionName">Question</div>
-            <div class="arrow-right" id="next">&gt;</div>
+            <div class="arrow" id="next">&gt;</div>
         </div>
 
         <div id="question">Question goes here...</div>
-        <img>
+        
     </div>
 
 
-        <div id='option' class="questionHeader">            <div id="optionName">Options</div> <div id="options"> </div></div>
+        <div id='optionContainer' >      
+                  <div id="optionName">Options</div> 
+                  <div id="options"> </div>
+        </div>
+
 
     <div id="btn-container">
         <div id="sectionName">Section</div>
         <div id="box"></div>
     </div>
+
+
+
     </div>
 
     
@@ -118,10 +125,12 @@
 
 
 
-    <footer>
-        <button class="nav-btn" id="clear-btn">Clear</button>
-        <button class="nav-btn" id="save-btn">Save</button>
-    </footer>
+    <div>
+        <button > Mark for Review </button>
+        <button class="nav-btn" id="clear-btn">Clear Response</button>
+        <button class="nav-btn" id="save-btn">Save and Next</button>
+        <button> Submit </button>
+    </div>
 
     <script src="main.js"></script>
 </body>

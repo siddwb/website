@@ -566,25 +566,23 @@ function shuffleArray(array) {
       options_content.innerHTML = ''
 
       const optionsList = document.createElement('ul');
-      optionsList.className = 'options';
+      optionsList.className = 'alphabet-list';
+
+      counter = 'A'.charCodeAt(0);
 
       Object.keys(data.options).forEach((optionIndex) => {
        //   console.log(optionIndex)
           const optionElement = document.createElement('li');
-          optionElement.className = 'option';
+          optionElement.id = "optionElement:"+optionIndex
+          optionElement.className = 'optionTextContainer';
 
-          const radioInput = document.createElement('input');
-          radioInput.type = 'radio';
-          radioInput.name = `q${currentQuestionIndex}`;
-          radioInput.value = optionIndex;
-
+        
 
           // Check if the current optionIndex matches the stored answer
 
           optionElement.innerHTML = `
-              <label>
-                  ${radioInput.outerHTML} ${data.options[optionIndex][language_chosen]} 
-              </label>
+              
+              <div class='numbero'>${String.fromCharCode(counter)} </div>   ${data.options[optionIndex][language_chosen]} 
           `;
 
           optionElement.addEventListener('click', () => {
@@ -593,7 +591,7 @@ function shuffleArray(array) {
               createQuestionButtons()
           })
 
-
+          counter++;
           optionsList.appendChild(optionElement);
       });
 
@@ -642,8 +640,8 @@ function shuffleArray(array) {
 
     createQuestionButtons()
       //const submitButton = document.getElementById('submit-btn');
-      prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
-      nextButton.style.display = currentQuestionIndex === sections[currentSection].length - 1 ? 'none' : 'inline-block';
+      prevButton.style.visibility = currentQuestionIndex === 0 ? 'hidden' : 'visible';
+      nextButton.style.visibility = currentQuestionIndex === sections[currentSection].length - 1 ? 'hidden' : 'visible';
       //submitButton.style.display = currentQuestionIndex === questions.length - 1 ? 'inline-block' : 'none';
 
   }
