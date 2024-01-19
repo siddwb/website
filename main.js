@@ -531,8 +531,8 @@ function displayEndTime() {
       let option_chosen = answer_arr[0];
       let answer_state = answer_arr[1];
       if (answer_state=='Attempted' || answer_state=='Marked') {
-          let radio = document.querySelector(`input[name="q${currentQuestionIndex}"][value="${option_chosen}"]`)
-          if (radio) radio.checked = false
+          let opd = document.getElementById('optionElement:'+option_chosen)
+          if (opd) opd.style.backgroundColor='white'
           answers[data[currentQuestionIndex].question_ID][1] = 'NotAttempted';
           answers[data[currentQuestionIndex].question_ID][0] = -1;
           createQuestionButtons()
@@ -546,6 +546,7 @@ function displayEndTime() {
         answers[data[currentQuestionIndex].question_ID][1] = 'Attempted';
         console.log(answers)
         createQuestionButtons()
+        nextQuestion()
     }
 })
 
@@ -566,7 +567,7 @@ function displayEndTime() {
       Object.keys(data.options).forEach((optionIndex) => {
        //   console.log(optionIndex)
           const optionElement = document.createElement('li');
-          optionElement.id = "optionElement:"+optionIndex
+          //optionElement.id = "optionElement:"+optionIndex
           optionElement.className = 'optionTextContainer';
 
         
@@ -575,13 +576,30 @@ function displayEndTime() {
 
           optionElement.innerHTML = `
               
-              <div class='numbero'>${String.fromCharCode(counter)} </div>   ${data.options[optionIndex][language_chosen]} 
+              <div class='numbero' id='optionElement:${optionIndex}' >${String.fromCharCode(counter)} </div>   ${data.options[optionIndex][language_chosen]} 
           `;
 
           optionElement.addEventListener('click', () => {
+
+            let opd = document.getElementById('optionElement:'+optionIndex);
+
+              if(answers[data.question_ID][1]!='Not Attempted'){
+                let opd = document.getElementById('optionElement:'+answers[data.question_ID][0]);
+                console.log(opd)
+                if(opd)opd.style.backgroundColor='white'
+              }
+
+              
+
+
               answers[data.question_ID][0] = optionIndex;
-              answers[data.question_ID][1] = 'Marked'
-              createQuestionButtons()
+              answers[data.question_ID][1] = 'Marked';
+
+
+              opd.style.backgroundColor='green'
+             // optionElement.style.backgroundColor='green'
+
+              createQuestionButtons();
           })
 
           counter++;
@@ -593,13 +611,15 @@ function displayEndTime() {
       option_chosen = answer_arr[0];
       answer_state = answer_arr[1];
      // console.log(option_chosen)
-      if (answer_state=='Attempted' || answer_state=='Marked') {
-          var radioButton = document.querySelector(`input[name="q${currentQuestionIndex}"][value="${option_chosen}"]`);
+       if (answer_state=='Attempted' || answer_state=='Marked') {
+          let opd = document.getElementById('optionElement:'+option_chosen)
           //cconsole.log(radioButton)
-          if (radioButton) {
-              radioButton.checked = true;
+          if (opd) {
+              opd.style.backgroundColor='green'
           }
       }
+
+      
 
   }
 
